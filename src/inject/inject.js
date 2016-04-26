@@ -15,7 +15,6 @@ chrome.extension.sendMessage({}, function(response) {
 		$a = $("<a href='mailto:jesse@jshawl.com'>Email deck to students</a>")
 		var $copyEmail = $("[onclick^='window.prompt']")
 		$a.attr("class", $copyEmail.attr("class"))
-		$copyEmail.after($a)
 		var emails = []
 		$(".status").each(function(i,e){
 		  if($(e).text().match(/ENROLLED/)){
@@ -27,7 +26,7 @@ chrome.extension.sendMessage({}, function(response) {
                 var link = getParameterByName("cwdeckurl")
 		var body = `Good morning!
 	
-		Thanks for coming out to GA for the Adobe InDesign bootcamp It was great to
+		Thanks for coming out to GA for the ${subject} class. It was great to
 		see you on campus and we hope you enjoyed it. If you haven't already,
 		please make sure to fill out the survey.
 		
