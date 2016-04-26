@@ -31,10 +31,10 @@ chrome.extension.sendMessage({}, function(response) {
 		please make sure to fill out the survey.
 		
 		You'll find the slide deck here - ${link}, so you can have it for reference. Let
-		us know if you have any issues opening them.
+		us know if you have any issues opening it.
 		
-		If you want to take a deeper dive into Visual Design - https://generalassemb.ly/education/visual-design/washington-dc
-		or Digital Marketing - https://generalassemb.ly/education/digital-marketing/washington-dc, check
+		If you want to take a deeper dive into
+		or 
 		out our part-time courses. Alternatively, keep an eye out on this page https://generalassemb.ly/education?format=classes-workshops for
 		other classes, workshops, and events.
 		
@@ -43,7 +43,7 @@ chrome.extension.sendMessage({}, function(response) {
 		-Claire
 		`
 		if(link){
-		  window.open("mailto:jesse@ga.co?BCC=" + emails.join(",") + "&subject=" + subject + " " + date + "&body=" + encodeURIComponent(body))
+		  window.open("mailto:dc@ga.co?BCC=" + emails.join(",") + "&subject=" + subject + " " + date + "&body=" + encodeURIComponent(body))
 		}
 	}
 	}, 10);
